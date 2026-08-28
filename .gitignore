@@ -216,3 +216,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ==================================
+# Project specific
+# ==================================
+
+# Local secrets
+config.py
+
+# Archive files
+0_archive/*
