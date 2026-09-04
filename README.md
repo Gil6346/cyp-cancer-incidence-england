@@ -34,10 +34,11 @@ cyp-cancer-incidence-england/
     NHS England region-level data where each row represents a unique aggregated observation defined by year, gender, NHS region, and NDRS cancer classification. Age group aggregated to 0-24. Coverage: 2013-2022
 
 - **Geographic levels consideration for regional analysis:**
-    Regional analysis uses NHS England Region level (7 regions), which provides sufficient case volumes for meaningful comparison of cancer incidence patterns across the 0-24 age group. Finer geographic levels (e.g. ICB, UTLA, LAUA) were considered but rejected due to small number suppression risk for rare cancer types in the CYP age group.
+    - Regional data uses pre-2019 NHS England legacy boundaries (**9** regions), retained across the full analysis period for consistency.
+    - Regional analysis uses NHS England Region level, which provides sufficient case volumes for meaningful comparison of cancer incidence patterns across the 0-24 age group. Finer geographic levels (e.g. ICB, UTLA, LAUA) were considered but rejected due to small number suppression risk for rare cancer types in the CYP age group.
 
 **Note:**
-- Both datasets use NDRS Cancer Group classification, which might differs some published research using ICD-10 based cancer groups classification for general adult cancer statistic. Direct comparison with other publications should be made with caution. 
+- Both datasets use NDRS Cancer Group classification, which differs from some published research using ICD-10 based cancer groups classification for general adult cancer statistic. Direct comparison with publications using ICD-10 groupings should be made with caution. 
 - Data is England-specific and excludes Scotland, Wales, and Northern Ireland.
 - NHS cancer registration data is published in aggregated form - no individual patient records are used or accessible in this analysis.
 - Incidence rates and confidence intervals are suppressed (represented as [u]) where the underlying count is fewer than 3.
@@ -47,12 +48,20 @@ cyp-cancer-incidence-england/
 
 The national dataset contains 15,480 records after filtering to the CYP 0-24 age group.
 
-Key findings from validation:
+Key findings from national dataset validation:
 - **Classification change (2018):** The NDRS detailed field shows a structural change from 2018 onwards - 'Cardia and oesophagogastric junction' was split into two separate categories. The NDRS main classification remains consistent. This is documented and accounted for in trend analysis at the detailed cancer type level.
 
-- **Suppressed values:** Incidence rates and confidence intervals are suppressed ([u]) for 11,869 of 15,480 records, primarily in younger age groups and rarer cancer types where counts fall below 33. Counts are available for all records. Analysis uses counts where rates are suppressed; rate-based analysis is restricted to records with published numerical estimates. Suppressed values are not interpreted as zeros.
+- **Suppressed values:** Incidence rates and confidence intervals are suppressed ([u]) for 11,869 of 15,480 records, primarily in younger age groups and rarer cancer types where counts fall below 3. Counts are available for all records. Analysis uses counts where rates are suppressed; rate-based analysis is restricted to records with published numerical estimates. Suppressed values are not interpreted as zeros.
 
 - **Complete core fields:** All analytical dimensions (year, gender, age group, cancer classification) are fully populated with no standard missing values.
+
+Key findings from regional dataset validation:
+
+- **Suppressed values:** 13,292 of 18,090 records have suppressed rates and confidence intervals, concentrated in rarer cancer types consistent with small case volumes at regional level.
+
+- **Classificaion difference:** The regional dataset uses different groupings for bladder and renal pelvis cancers (malignant or in situ / uncertain or unknown) rather than the stage-specific subcategories used in the national dataset. Case counts for these categories are negligible in the 0–24 age group (median: 0, max: 7). Both datasets are analysed separately; this difference does not affect the analysis.
+
+- **Legacy boundaries:** Regional dataset uses pre-2019 NHS England legacy boundaries (9 regions).
 
 ## Tools
 
@@ -63,10 +72,10 @@ Key findings from validation:
 
 ## Project Status
 
-**Notebook 01 - Data Validation & Quality Assessment: In progress**
-- Structural validation, schema checks, coverage analysis, suppression mapping, and classification consistency review completed for national dataset.
+**Notebook 01 - Data Validation & Quality Assessment: Completed**
+- Structural validation, schema checks, expected value validation, coverage analysis, grain validation, suppression mapping, classification consistency review, numeric conversion, and parquet output completed for both national and regional dataset.
 
-**Planned:**
+**In progress:**
 - Analysis notebooks
 - SQL queries
 - Power BI dashboard
