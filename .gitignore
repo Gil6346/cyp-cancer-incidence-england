@@ -226,3 +226,6 @@ config.py
 
 # Archive files
 0_archive/*
+
+# Database files
+*.db
