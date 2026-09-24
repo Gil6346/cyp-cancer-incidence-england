@@ -73,10 +73,14 @@ Key findings from regional dataset validation:
 ## Project Status
 
 **Notebook 01 - Data Validation & Quality Assessment: Completed**
-- Structural validation, schema checks, expected value validation, coverage analysis, grain validation, suppression mapping, classification consistency review, numeric conversion, and parquet output completed for both national and regional dataset.
+- Structural validation, schema checks, expected value validation, coverage analysis, grain validation, suppression mapping, classification consistency review, numeric conversion, and parquet output completed for both national, regional and icd-10 dataset.
+
+**Notebook 02 - Analysis: Completed**
+- Exploratory analysis notebook, including analysis on age profiles and cancer type composition, geographic variation, national and regional trend completed. 10 Analytical charts generated for each of the three business questions.
+
+**SQL queries: Completed**
+- Documentation of all 9 SQL queries completed, with separate screenshots of all query results.
 
 **In progress:**
-- Analysis notebooks
-- SQL queries
 - Power BI dashboard
 - one-page insight summary
