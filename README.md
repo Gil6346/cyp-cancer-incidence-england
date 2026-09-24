@@ -79,7 +79,7 @@ Key findings from regional dataset validation:
 - Exploratory analysis notebook, including analysis on age profiles and cancer type composition, geographic variation, national and regional trend completed. 10 Analytical charts generated for each of the three business questions.
 
 **SQL queries: Completed**
-- Documentation of all 9 SQL queries completed, with separate screenshots of all query results.
+- Documentation of all 10 SQL queries completed, with separate screenshots of all query results.
 
 **In progress:**
 - Power BI dashboard
