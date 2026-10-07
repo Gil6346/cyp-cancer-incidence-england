@@ -83,12 +83,13 @@ Key findings from regional dataset validation:
 
 **Interactive Power BI dashboard:** Publishing in progress.
 
-In the meantime, the dashboard file (.pbix) can be downloaded and opened in Power BI Desktop (free):
+- In the meantime, the dashboard file (.pbix) can be downloaded and opened in Power BI Desktop (free):
 
-[Download CYP_Cancer_Dashboard.pbix](3_output/CYP_Cancer_Dashboard.pbix)
-[Download ons_regions_2016.geojson](0_data/3_powerbi/ons_regions_2016.geojson)
+- [Download CYP_Cancer_Dashboard.pbix](3_output/CYP_Cancer_Dashboard.pbix)
 
-Power BI Desktop download: https://powerbi.microsoft.com/desktop
+- [Download ons_regions_2016.geojson](0_data/3_powerbi/ons_regions_2016.geojson)
+
+- Power BI Desktop download: https://powerbi.microsoft.com/desktop
 
 **In progress:**
 - one-page insight summary
