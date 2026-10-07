@@ -81,6 +81,14 @@ Key findings from regional dataset validation:
 **SQL queries: Completed**
 - Documentation of all 10 SQL queries completed, with separate screenshots of all query results.
 
+**Interactive Power BI dashboard:** Publishing in progress.
+
+In the meantime, the dashboard file (.pbix) can be downloaded and 
+opened in Power BI Desktop (free):
+
+[Download CYP_Cancer_Dashboard.pbix](3_output/CYP_Cancer_Dashboard.pbix)
+
+Power BI Desktop download: https://powerbi.microsoft.com/desktop
+
 **In progress:**
-- Power BI dashboard
 - one-page insight summary
