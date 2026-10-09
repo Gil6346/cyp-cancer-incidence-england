@@ -85,7 +85,7 @@ Key findings from regional dataset validation:
 
 - In the meantime, the dashboard file (.pbix) can be downloaded and opened in Power BI Desktop (free):
 
-- [Download CYP_Cancer_Dashboard.pbix](3_output/CYP_Cancer_Dashboard.pbix)
+- [Download CYP_Cancer_Dashboard.pbix](3_output/1_dashboard/CYP_Cancer_Dashboard.pbix)
 
 - ONS Official 2016 England regions geojson file is required for the custom map in the dashboard. [Download ons_regions_2016.geojson](0_data/3_powerbi/ons_regions_2016.geojson) and load the geojson file in the dashboard.
 
