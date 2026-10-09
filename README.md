@@ -87,7 +87,7 @@ Key findings from regional dataset validation:
 
 - [Download CYP_Cancer_Dashboard.pbix](3_output/CYP_Cancer_Dashboard.pbix)
 
-- [Download ons_regions_2016.geojson](0_data/3_powerbi/ons_regions_2016.geojson)
+- ONS Official 2016 England regions geojson file is required for the custom map in the dashboard. [Download ons_regions_2016.geojson](0_data/3_powerbi/ons_regions_2016.geojson) and load the geojson file in the dashboard.
 
 - Power BI Desktop download: https://powerbi.microsoft.com/desktop
 
