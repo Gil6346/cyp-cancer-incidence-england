@@ -10,6 +10,21 @@ The analysis focuses on:
 2. Geographic variation across NHS England regions
 3. Changes in incidence patterns between 2013 and 2022
 
+## Key Findings
+
+- **Blood Cancer and Young Adulthood Age Group Dominate**
+  - Blood cancer (35.1%) and Brain cancer (19.6%) together account for over half of all CYP cancer cases in England between 2013 and 2022.
+  - Cancer incidence rises sharply with age: the 20-24 age group accounts for 36% of all cases — nearly double the next largest group.
+  - The composition of cancer types shifts meaningfully across age groups, with Skin cancer emerging as the second most common type in young adults aged 20-24, displacing Brain cancer from that position.
+- **Rising Trends in Blood Cancer and Endocrine Glands**
+  - National CYP cancer case counts were broadly stable across the decade, ranging between approximately 7,200 and 8,200 cases per year. A 6.4% decline in 2020 is consistent with COVID-19 diagnostic disruption, with partial recovery by 2022 still below 2019 levels.
+  - Skin cancer showed the largest absolute decline (-220 cases comparing 2013 to 2022), while blood cancer showed the largest increase (+196 cases), followed by Endocrine glands excluding brain (+142 cases), consistent with nationally recognised trends in thyroid cancer incidence among young adults.
+- **North East Has Highest Population-Adjusted Cancer Burden**
+  - Raw cancer case counts are highest in South East England and London (11,710 and 11,676 cases respectively), reflecting larger populations rather than higher cancer risk.
+  - When adjusted for population size, the North East records the highest age-specific incidence rate at 21.6 per 100,000 — despite ranking last by raw case count.
+  - The overall range of population-adjusted rates across regions is narrow (18.4-21.6 per 100,000), suggesting that most regional variation in case counts is explained by population size rather than genuine differences in cancer incidence.
+
+
 ## Project Structure
     cyp-cancer-incidence-england/
     ├── 0_data/                 # Data folder
@@ -26,6 +41,9 @@ The analysis focuses on:
         ├── 1_dashboard/
         ├── 2_report/
         └── 3_images/
+            ├── 1_SQL_Query_Results_Screenshots/
+            ├── 2_Python_Analysis_Charts/
+            └── 3_PowerBI_Dashboard_Preview/
 
     ├── requirements.txt        # Python dependencies
 
@@ -108,7 +126,7 @@ Full validation documented in `1_notebooks/01_data_validation.ipynb`.
 
 Full Python dependencies listed in `requirements.txt`.
 
-## Project Status
+## Project Status (Completed)
 
 ### Notebook 01 - Data Validation & Quality Assessment: Completed
 - Structural validation, schema checks, expected value validation, coverage analysis, grain validation, suppression mapping, classification consistency review, numeric conversion, and parquet output completed for both national, regional and icd-10 dataset.
@@ -119,7 +137,7 @@ Full Python dependencies listed in `requirements.txt`.
 ### SQL queries: Completed
 - Documentation of all 10 SQL queries completed, with separate screenshots of all query results.
 
-### Interactive Power BI dashboard: Completed. Publishing in progress.
+### Interactive Power BI dashboard: Completed and downloadable
 
 - In the meantime, the dashboard file (.pbix) can be downloaded and opened in Power BI Desktop (free):
 
@@ -129,27 +147,34 @@ Full Python dependencies listed in `requirements.txt`.
 
 - Power BI Desktop download: https://powerbi.microsoft.com/desktop
 
-### In progress:
-- one-page insight summary
+### A 2-pages briefing summary: Completed and downloadable
 
+- Briefing summary for policy reader, including three key findings: age profile and cancer type composition, geographic variation, and incidence trends; recommendations, data limitation, and key supporting charts.
+- Download [CYP_Cancer_Incidence_Briefing.pdf](3_output/2_reports/CYP_Cancer_Incidence_Briefing_England_2013-2022.pdf)
 
 ## Dashboard Preview
 
 ### Page 1 — Cancer Type & Age Analysis
-![Dashboard Page 1](3_output/PowerBI_Dashboard_Preview_Page1.png)
+![Dashboard Page 1](3_output/3_images/3_PowerBI_Dashboard_Preview/PowerBI_Dashboard_Preview_Page1.png)
 
 ### Page 2 — Geographic Analysis
-![Dashboard Page 2](3_output/PowerBI_Dashboard_Preview_Page2.png)
+![Dashboard Page 2](3_output/3_images/3_PowerBI_Dashboard_Preview/PowerBI_Dashboard_Preview_Page2.png)
+
+### Walkthrough Video
+[![Walkthrough Video](https://img.youtube.com/vi/8ixOmHSVQjU/maxresdefault.jpg)](https://youtu.be/8ixOmHSVQjU)
 
 ## Analysis Charts
 
 ### Age Profiles and Cancer Type Composition
-![Cancer Type Distribution](3_output/3_images/2_Python_Analysis_Charts/1_1_cancer_type_distribution.png)
-*Blood cancer accounts for 35% of all CYP cancer cases in England (2013–2022)*
+![Cancer Type Distribution](3_output/3_images/2_Python_Analysis_Charts/1_2_age_group_distribution.png)
+*The 20–24 age group accounts for 36% of all cases in England (2013–2022)*
 
-![Age Group Distribution](3_output/3_images/2_Python_Analysis_Charts/1_2_age_group_distribution.png)
-*The 20–24 age group accounts for 36% of all cases*
+![Top 3 Cancer Type by Age Group](3_output/3_images/2_Python_Analysis_Charts/1_3_cancer_type_composition_by_age_group.png)
+*Blood cancer dominates in all age groups, accounts for 35% of all CYP cancer cases*
 
 ### Geographic Variation
 ![Count vs Rate Comparison](3_output/3_images/2_Python_Analysis_Charts/2_3_count_ranking_rate_ranking_comparison.png)
 *The North East ranks last by raw case count but first by population-adjusted rate*
+
+![Regional Rate Trend](3_output/3_images/2_Python_Analysis_Charts/3_4_regional_rate_trend.png)
+*The North East had a notable peak (27.4 per 100,000 population) in 2015*
